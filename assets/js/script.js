@@ -5,17 +5,17 @@ form.addEventListener('submit', function(event) {
     event.preventDefault();
 
         const weight = document.getElementById('weight').value;
-        const height = parseFloat(document.getElementById('height').value);
+        const height = parseFloat(document.getElementById('height').value); //Pegar numero quebrado para o tamanho
 
     
-    const bmi = (weight/ (height*height)).toFixed(2);
+    const bmi = (weight/ (height*height)).toFixed(2); //Calcula o IMC
 
     const value = document.getElementById('value');
     let description = '';
 
     value.classList.add('attention');
 
-    document.getElementById('infos').classList.remove('hidden')
+    document.getElementById('infos').classList.remove('hidden') //Adiciona espaço para os dados de imc
 
     if (bmi < 18.5){
         description = 'Cuidado! Você está abaixo do peso!'
